@@ -69,3 +69,142 @@ O sistema segue uma arquitetura MVT (Model-View-Template), onde:
 
 Embora a arquitetura MVT seja predominante no Django, é comum utilizar o padrão Repository para encapsular a lógica de acesso a dados, especialmente em aplicações maiores ou mais complexas. O Repository atua como uma camada intermediária entre o Model e o banco de dados, facilitando a separação de preocupações e tornando o código mais modular e testável. Ele fornece métodos para recuperar, criar, atualizar e excluir objetos do banco de dados, abstraindo os detalhes de implementação específicos do modelo.
 
+
+## 4. Requisitos Funcionais
+
+### Lista Detalhada de Funcionalidades do Sistema
+
+- Cadastro de novas histórias com título, texto, data de publicação, imagem ilustrativa e categoria.
+- Visualização de lista de histórias em formato de cards.
+- Filtragem de histórias por categoria.
+- Busca de histórias por título ou categoria.
+- Visualização detalhada de cada história.
+
+### Casos de Uso Principais
+
+- Um usuário deseja registrar uma nova história.
+- Um usuário deseja visualizar a lista de histórias disponíveis.
+- Um usuário deseja filtrar as histórias por categoria.
+- Um usuário deseja buscar uma história específica por título ou categoria.
+- Um usuário deseja visualizar detalhes completos de uma história selecionada.
+
+### Fluxos de Trabalho do Usuário
+
+1. Cadastro de Histórias:
+   - Preenchimento do formulário de cadastro de nova história.
+   - Envio dos dados do formulário para o sistema.
+   - Confirmação do cadastro da história.
+
+2. Visualização de Lista de Histórias:
+   - Navegação para a página principal do sistema.
+   - Visualização da lista de histórias em formato de cards.
+   - Possibilidade de clicar em uma história para ver detalhes.
+
+3. Filtragem de Histórias por Categoria:
+   - Seleção da categoria desejada no filtro de categorias.
+   - Atualização da lista de histórias para exibir apenas as histórias da categoria selecionada.
+
+4. Busca de Histórias:
+   - Digitação do termo de busca na barra de busca.
+   - Submissão do termo de busca para o sistema.
+   - Exibição dos resultados da busca na lista de histórias.
+
+## 5. Requisitos Não Funcionais
+
+### Desempenho Esperado do Sistema
+
+Espera-se que o sistema apresente um desempenho rápido e responsivo, garantindo uma experiência de usuário satisfatória mesmo em condições de alta carga de acessos.
+
+### Segurança e Autenticação
+
+O sistema deve garantir a segurança dos dados dos usuários, incluindo mecanismos robustos de autenticação e autorização. As informações sensíveis devem ser protegidas contra acesso não autorizado.
+
+### Escalabilidade e Manutenibilidade
+
+O sistema deve ser facilmente escalável para acomodar um aumento no número de usuários e de histórias cadastradas. Além disso, deve ser de fácil manutenção, com código limpo e organizado para facilitar futuras atualizações e correções de bugs.
+
+## 6. Tecnologias Utilizadas
+
+### Linguagens de Programação
+
+- Python
+- HTML
+- CSS
+
+### Frameworks
+
+- Django
+- Django REST Framework
+
+### Bancos de Dados
+
+- SQLite (ambiente de desenvolvimento)
+- PostgreSQL (ambiente de produção)
+
+### Ferramentas de Desenvolvimento
+
+- Git
+- Visual Studio Code
+
+## 7. Modelo de Dados
+
+### Estrutura do Banco de Dados
+
+O banco de dados do sistema possui as seguintes tabelas:
+
+- História: Representa uma história cadastrada no sistema.
+  - id: Identificador único da história.
+  - título: Título da história.
+  - texto: Conteúdo da história.
+  - data_publicação: Data de publicação da história.
+  - imagem_ilustrativa: Imagem ilustrativa da história.
+  - categoria: Categoria da história.
+
+- Categoria: Representa as categorias disponíveis para as histórias.
+  - id: Identificador único da categoria.
+  - nome: Nome da categoria.
+
+### Relacionamentos entre Entidades
+
+- Cada história pode pertencer a uma única categoria.
+- Cada categoria pode ter várias histórias associadas.
+
+### Esquema de Armazenamento
+
+O esquema de armazenamento segue o modelo relacional, com as tabelas História e Categoria relacionadas através de chaves estrangeiras.
+
+## 8. Interfaces do Usuário
+
+### Layout e Design das Interfaces
+
+As interfaces do usuário seguem um design intuitivo e responsivo, garantindo uma experiência agradável em dispositivos de diferentes tamanhos.
+
+### Funcionalidades Específicas de Cada Tela
+
+- Página Principal: Apresenta uma lista de histórias em formato de cards, permitindo filtrar por categoria e buscar histórias por título.
+- Página de Detalhes: Exibe informações detalhadas de uma história selecionada, incluindo título, texto, data de publicação, imagem ilustrativa e categoria.
+
+### Fluxos de Interação do Usuário
+
+1. Visualização da Lista de Histórias:
+   - O usuário pode navegar pela lista de histórias, visualizando os cards de cada história.
+   - Ele pode clicar em uma história para ver mais detalhes.
+
+2. Busca e Filtragem:
+   - O usuário pode buscar histórias por título utilizando a barra de busca.
+   - Ele também pode filtrar as histórias por categoria utilizando o menu de categorias.
+
+## 9. Arquitetura de Implementação
+
+### Organização do Código-Fonte
+
+O código-fonte do sistema está organizado em diferentes diretórios de acordo com sua funcionalidade:
+
+- `models/`: Contém os modelos de dados do sistema.
+- `views/`: Contém as views responsáveis por processar as requisições do usuário.
+- `templates/`: Contém os templates HTML utilizados para renderizar as páginas.
+- `static/`: Contém arquivos estáticos como CSS, JavaScript e imagens.
+
+### Divisão em Módulos e Componentes
+
+O código-fonte está dividido em mód
