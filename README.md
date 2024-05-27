@@ -1,8 +1,8 @@
 # V-Commerce
 
 
-\title{V-Commerce}
-\author{Vinícius de Morais Lino}
+
+author {Vinícius de Morais Lino}
 
 
 # Escopo do Projeto
@@ -268,4 +268,3 @@ A autenticação dos usuários é realizada utilizando o sistema de autenticaç�
 2. Preencha o formulário com detalhes adicionais, como endereço e informações de contato.
 3. Clique no botão "Salvar" para salvar as mudanças.
 
-\end{document}
