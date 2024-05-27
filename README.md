@@ -156,8 +156,6 @@ O sistema deve ser facilmente escalável para acomodar um aumento no número de 
 
 - Visual Studio Code
 - Git
-- Docker
-- PostgreSQL
 
 ## 7. Implementação e Configuração do Sistema
 
@@ -166,30 +164,30 @@ O sistema deve ser facilmente escalável para acomodar um aumento no número de 
 Para configurar a aplicação localmente, siga os seguintes passos:
 
 1. Clone o repositório para sua máquina local:
-\begin{verbatim}
+
 git clone https://github.com/MoraisL/fullstack_Vcommerce
-\end{verbatim}
+
 2. Navegue até o diretório do projeto:
-\begin{verbatim}
+
 cd ecommerce-hoodie-app
-\end{verbatim}
+
 3. Crie um ambiente virtual e ative-o:
-\begin{verbatim}
+
 python -m venv env
 source env/bin/activate
-\end{verbatim}
+
 4. Instale as dependências a partir do arquivo requirements.txt:
-\begin{verbatim}
+
 pip install -r requirements.txt
-\end{verbatim}
+
 5. Aplique as migrações para criar o esquema do banco de dados:
-\begin{verbatim}
+
 python manage.py migrate
-\end{verbatim}
+
 6. Execute o servidor de desenvolvimento:
-\begin{verbatim}
+
 python manage.py runserver
-\end{verbatim}
+
 
 Acesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
 
