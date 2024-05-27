@@ -1,4 +1,9 @@
-# Historynicius
+# V-Commerce
+
+
+\title{V-Commerce}
+\author{Vinícius de Morais Lino}
+
 
 # Escopo do Projeto
 
@@ -6,38 +11,41 @@
 
 ### Visão Geral do Projeto
 
-O projeto consiste no desenvolvimento de um sistema web fullstack para registro e visualização de histórias ou textos. A aplicação permite que os usuários cadastrem novas histórias com informações como título, texto, data de publicação, imagem ilustrativa e categoria. Além disso, oferece funcionalidades de busca, filtragem por categoria e visualização detalhada das histórias.
+O projeto consiste no desenvolvimento de um sistema web fullstack para um E-commerce. A aplicação permite que os usuários adicionem produtos ao carrinho, removam produtos do carrinho, pesquisem produtos e filtrem produtos por categorias e outros critérios. Além disso, oferece funcionalidades de autenticação e autorização para garantir a segurança dos dados dos usuários.
 
 ### Objetivos e Propósito do Sistema
 
-O objetivo principal do sistema é proporcionar uma plataforma intuitiva e eficiente para que os usuários possam registrar e compartilhar suas histórias de forma organizada. O sistema visa promover a criação e o compartilhamento de conteúdo entre os usuários, facilitando a busca e a leitura de histórias de interesse.
+O objetivo principal do sistema é proporcionar uma plataforma intuitiva e eficiente para que os usuários possam realizar compras online de forma organizada. O sistema visa facilitar a navegação, a busca e a compra de produtos, proporcionando uma experiência de usuário agradável e segura.
 
 ### Benefícios Esperados do Projeto
 
-- Facilidade de registro e visualização de histórias.
-- Promoção da interação e compartilhamento de conteúdo entre os usuários.
-- Organização e categorização eficientes das histórias para uma melhor experiência do usuário.
-- Possibilidade de filtragem e busca rápida de histórias por título ou categoria.
+- Facilidade de adicionar e remover produtos do carrinho de compras.
+- Promoção de uma experiência de compra segura e eficiente.
+- Organização e categorização eficientes dos produtos para uma melhor experiência do usuário.
+- Possibilidade de busca e filtragem rápida de produtos por diversos critérios.
 
 ## 2. Visão Geral do Sistema
 
 ### Descrição do Sistema
 
-O sistema é uma aplicação web desenvolvida utilizando o framework Django, que segue a arquitetura MVC (Model-View-Controller) adaptada para MTV (Model-Template-View). Ele permite que os usuários cadastrem novas histórias, visualizem uma lista de histórias em formato de cards, filtrem as histórias por categoria e acessem detalhes completos das histórias selecionadas.
+O sistema é uma aplicação web desenvolvida utilizando o framework Django, que segue a arquitetura MVC (Model-View-Controller) adaptada para MTV (Model-Template-View). Ele permite que os usuários adicionem produtos ao carrinho, removam produtos do carrinho, visualizem uma lista de produtos, filtrem os produtos por categoria e acessem detalhes completos dos produtos selecionados.
 
 ### Público-Alvo do Sistema
 
-O público-alvo do sistema são pessoas que desejam compartilhar suas histórias e também aquelas que buscam por conteúdo interessante para leitura. O sistema é voltado para uma ampla gama de usuários, desde escritores amadores até leitores ávidos por novas histórias.
+O público-alvo do sistema são consumidores que desejam realizar compras online. O sistema é voltado para uma ampla gama de usuários, desde compradores ocasionais até consumidores frequentes de lojas virtuais.
 
 ### Requisitos Funcionais e Não Funcionais
 
 #### Requisitos Funcionais
 
-- Cadastro de novas histórias com título, texto, data de publicação, imagem ilustrativa e categoria.
-- Visualização de lista de histórias em formato de cards.
-- Filtragem de histórias por categoria.
-- Busca de histórias por título ou categoria.
-- Visualização detalhada de cada história.
+- Cadastro de novos produtos com nome, descrição, preço, imagem e categoria.
+- Visualização de lista de produtos.
+- Filtragem de produtos por categoria.
+- Busca de produtos por nome ou categoria.
+- Visualização detalhada de cada produto.
+- Adicionar produtos ao carrinho de compras.
+- Remover produtos do carrinho de compras.
+- Finalização de compra e processamento de pagamento.
 
 #### Requisitos Não Funcionais
 
@@ -51,63 +59,68 @@ O público-alvo do sistema são pessoas que desejam compartilhar suas histórias
 
 O sistema segue uma arquitetura MVT (Model-View-Template), onde:
 
-- **Model:** Representa a camada de dados e lógica de negócios. Aqui são definidos os modelos de dados que representam as entidades do sistema, como História e Categoria.
-
+- **Model:** Representa a camada de dados e lógica de negócios. Aqui são definidos os modelos de dados que representam as entidades do sistema, como Produto e Categoria.
 - **View:** Controla a lógica de interação entre o modelo e o template. As views processam as requisições do usuário, interagem com o modelo para obter ou modificar dados e retornam respostas apropriadas ao navegador.
-
 - **Template:** Responsável pela apresentação visual das páginas HTML. Os templates contêm a estrutura da página e inserções de dados dinâmicos utilizando a linguagem de template do Django.
 
 ### Papel de Cada Componente
 
 - **Model:** Lida com a manipulação dos dados do sistema, incluindo operações de leitura, escrita, atualização e exclusão. Ele encapsula a lógica de negócios e fornece uma interface para acessar e modificar os dados.
-
 - **View:** Recebe as requisições do navegador e chama os métodos adequados nos modelos para processar os dados. Elas são responsáveis por retornar uma resposta HTTP apropriada, geralmente renderizando um template com os dados necessários.
-
 - **Template:** Define a estrutura visual das páginas HTML, incluindo a apresentação dos dados dinâmicos fornecidos pelas views. Os templates contêm marcações especiais que são substituídas pelos dados reais durante o processo de renderização.
 
 ### Uso do Padrão Repository para Acesso a Dados
 
 Embora a arquitetura MVT seja predominante no Django, é comum utilizar o padrão Repository para encapsular a lógica de acesso a dados, especialmente em aplicações maiores ou mais complexas. O Repository atua como uma camada intermediária entre o Model e o banco de dados, facilitando a separação de preocupações e tornando o código mais modular e testável. Ele fornece métodos para recuperar, criar, atualizar e excluir objetos do banco de dados, abstraindo os detalhes de implementação específicos do modelo.
 
-
 ## 4. Requisitos Funcionais
 
 ### Lista Detalhada de Funcionalidades do Sistema
 
-- Cadastro de novas histórias com título, texto, data de publicação, imagem ilustrativa e categoria.
-- Visualização de lista de histórias em formato de cards.
-- Filtragem de histórias por categoria.
-- Busca de histórias por título ou categoria.
-- Visualização detalhada de cada história.
+- Cadastro de novos produtos com nome, descrição, preço, imagem e categoria.
+- Visualização de lista de produtos.
+- Filtragem de produtos por categoria.
+- Busca de produtos por nome ou categoria.
+- Visualização detalhada de cada produto.
+- Adicionar produtos ao carrinho de compras.
+- Remover produtos do carrinho de compras.
+- Finalização de compra e processamento de pagamento.
 
 ### Casos de Uso Principais
 
-- Um usuário deseja registrar uma nova história.
-- Um usuário deseja visualizar a lista de histórias disponíveis.
-- Um usuário deseja filtrar as histórias por categoria.
-- Um usuário deseja buscar uma história específica por título ou categoria.
-- Um usuário deseja visualizar detalhes completos de uma história selecionada.
+- Um usuário deseja adicionar um produto ao carrinho.
+- Um usuário deseja remover um produto do carrinho.
+- Um usuário deseja visualizar a lista de produtos disponíveis.
+- Um usuário deseja filtrar os produtos por categoria.
+- Um usuário deseja buscar um produto específico por nome ou categoria.
+- Um usuário deseja visualizar detalhes completos de um produto selecionado.
+- Um usuário deseja finalizar a compra e processar o pagamento.
 
 ### Fluxos de Trabalho do Usuário
 
-1. Cadastro de Histórias:
-   - Preenchimento do formulário de cadastro de nova história.
-   - Envio dos dados do formulário para o sistema.
-   - Confirmação do cadastro da história.
-
-2. Visualização de Lista de Histórias:
-   - Navegação para a página principal do sistema.
-   - Visualização da lista de histórias em formato de cards.
-   - Possibilidade de clicar em uma história para ver detalhes.
-
-3. Filtragem de Histórias por Categoria:
-   - Seleção da categoria desejada no filtro de categorias.
-   - Atualização da lista de histórias para exibir apenas as histórias da categoria selecionada.
-
-4. Busca de Histórias:
-   - Digitação do termo de busca na barra de busca.
-   - Submissão do termo de busca para o sistema.
-   - Exibição dos resultados da busca na lista de histórias.
+1. **Adicionar Produto ao Carrinho:**
+    - Seleção do produto desejado.
+    - Adição do produto ao carrinho de compras.
+    - Confirmação da adição do produto ao carrinho.
+2. **Remover Produto do Carrinho:**
+    - Visualização do carrinho de compras.
+    - Seleção do produto a ser removido.
+    - Remoção do produto do carrinho.
+3. **Visualização de Lista de Produtos:**
+    - Navegação para a página principal do sistema.
+    - Visualização da lista de produtos em formato de cards.
+    - Possibilidade de clicar em um produto para ver detalhes.
+4. **Filtragem de Produtos por Categoria:**
+    - Seleção da categoria desejada no filtro de categorias.
+    - Atualização da lista de produtos para exibir apenas os produtos da categoria selecionada.
+5. **Busca de Produtos:**
+    - Digitação do termo de busca na barra de busca.
+    - Submissão do termo de busca para o sistema.
+    - Exibição dos resultados da busca na lista de produtos.
+6. **Finalização de Compra:**
+    - Navegação para a página de finalização de compra.
+    - Preenchimento das informações de pagamento e envio.
+    - Confirmação da compra e processamento do pagamento.
 
 ## 5. Requisitos Não Funcionais
 
@@ -121,7 +134,7 @@ O sistema deve garantir a segurança dos dados dos usuários, incluindo mecanism
 
 ### Escalabilidade e Manutenibilidade
 
-O sistema deve ser facilmente escalável para acomodar um aumento no número de usuários e de histórias cadastradas. Além disso, deve ser de fácil manutenção, com código limpo e organizado para facilitar futuras atualizações e correções de bugs.
+O sistema deve ser facilmente escalável para acomodar um aumento no número de usuários e de produtos cadastrados. Além disso, deve ser de fácil manutenção, com código limpo e organizado para facilitar futuras atualizações e correções de bugs.
 
 ## 6. Tecnologias Utilizadas
 
@@ -130,81 +143,129 @@ O sistema deve ser facilmente escalável para acomodar um aumento no número de 
 - Python
 - HTML
 - CSS
+- JavaScript
 
-### Frameworks
+### Frameworks e Bibliotecas
 
 - Django
-- Django REST Framework
-
-### Bancos de Dados
-
-- SQLite (ambiente de desenvolvimento)
-- PostgreSQL (ambiente de produção)
+- Django Rest Framework
+- Bootstrap
+- jQuery
 
 ### Ferramentas de Desenvolvimento
 
-- Git
 - Visual Studio Code
+- Git
+- Docker
+- PostgreSQL
 
-## 7. Modelo de Dados
+## 7. Implementação e Configuração do Sistema
 
-### Estrutura do Banco de Dados
+### Instruções para Configuração do Sistema Localmente
 
-O banco de dados do sistema possui as seguintes tabelas:
+Para configurar a aplicação localmente, siga os seguintes passos:
 
-- História: Representa uma história cadastrada no sistema.
-  - id: Identificador único da história.
-  - título: Título da história.
-  - texto: Conteúdo da história.
-  - data_publicação: Data de publicação da história.
-  - imagem_ilustrativa: Imagem ilustrativa da história.
-  - categoria: Categoria da história.
+1. Clone o repositório para sua máquina local:
+\begin{verbatim}
+git clone https://github.com/MoraisL/fullstack_Vcommerce
+\end{verbatim}
+2. Navegue até o diretório do projeto:
+\begin{verbatim}
+cd ecommerce-hoodie-app
+\end{verbatim}
+3. Crie um ambiente virtual e ative-o:
+\begin{verbatim}
+python -m venv env
+source env/bin/activate
+\end{verbatim}
+4. Instale as dependências a partir do arquivo requirements.txt:
+\begin{verbatim}
+pip install -r requirements.txt
+\end{verbatim}
+5. Aplique as migrações para criar o esquema do banco de dados:
+\begin{verbatim}
+python manage.py migrate
+\end{verbatim}
+6. Execute o servidor de desenvolvimento:
+\begin{verbatim}
+python manage.py runserver
+\end{verbatim}
 
-- Categoria: Representa as categorias disponíveis para as histórias.
-  - id: Identificador único da categoria.
-  - nome: Nome da categoria.
+Acesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
 
-### Relacionamentos entre Entidades
+### Navegação e Funcionalidades do Sistema
 
-- Cada história pode pertencer a uma única categoria.
-- Cada categoria pode ter várias histórias associadas.
+- Navegue pelos produtos na página principal.
+- Utilize a barra de busca para encontrar produtos específicos.
+- Veja informações detalhadas dos produtos na página de detalhes do produto.
+- Adicione produtos ao carrinho e gerencie os itens selecionados.
+- Prossiga para a finalização de compra para concluir suas compras.
+- Registre-se e faça login para acessar funcionalidades personal
 
-### Esquema de Armazenamento
 
-O esquema de armazenamento segue o modelo relacional, com as tabelas História e Categoria relacionadas através de chaves estrangeiras.
 
-## 8. Interfaces do Usuário
+cesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
 
-### Layout e Design das Interfaces
+### Navegação e Funcionalidades do Sistema
 
-As interfaces do usuário seguem um design intuitivo e responsivo, garantindo uma experiência agradável em dispositivos de diferentes tamanhos.
+- Navegue pelos produtos na página principal.
+- Utilize a barra de busca para encontrar produtos específicos.
+- Veja informações detalhadas dos produtos na página de detalhes do produto.
+- Adicione produtos ao carrinho e gerencie os itens selecionados.
+- Prossiga para a finalização de compra para concluir suas compras.
+- Registre-se e faça login para acessar funcionalidades personalizadas.
+- Atualize os detalhes do usuário na página de perfil.
+- Explore diferentes categorias de produtos e veja os produtos relacionados.
 
-### Funcionalidades Específicas de Cada Tela
+## 8. Endpoints e Descrições
 
-- Página Principal: Apresenta uma lista de histórias em formato de cards, permitindo filtrar por categoria e buscar histórias por título.
-- Página de Detalhes: Exibe informações detalhadas de uma história selecionada, incluindo título, texto, data de publicação, imagem ilustrativa e categoria.
+\begin{itemize}
+    \item \textbf{Homepage:} URL: \texttt{/} Método: GET Descrição: Exibe a página principal com produtos.
+    \item \textbf{About Section:} URL: \texttt{/about/} Método: GET Descrição: Exibe informações sobre a aplicação.
+    \item \textbf{Login Page:} URL: \texttt{/login/} Método: GET, POST Descrição: Permite que os usuários façam login.
+    \item \textbf{Logout Page:} URL: \texttt{/logout/} Método: GET Descrição: Permite que os usuários façam logout.
+    \item \textbf{Register Page:} URL: \texttt{/register/} Método: GET, POST Descrição: Permite que novos usuários se registrem.
+    \item \textbf{Profile Page:} URL: \texttt{/update_user/} Método: GET, POST Descrição: Permite que os usuários visualizem e atualizem seus detalhes.
+    \item \textbf{User Info Page:} URL: \texttt{/update_info/} Método: GET, POST Descrição: Permite que os usuários adicionem informações adicionais.
+    \item \textbf{Product Categories Page:} URL: \texttt{/category/str:foo/} Método: GET Descrição: Exibe produtos de uma categoria específica.
+    \item \textbf{Product Details Page:} URL: \texttt{/product/int:pk/} Método: GET Descrição: Exibe informações detalhadas de um produto específico.
+    \item \textbf{Cart Page:} URL: \texttt{/cart/} Método: GET Descrição: Exibe os produtos adicionados ao carrinho.
+    \item \textbf{Search Page:} URL: \texttt{/search/} Método: GET, POST Descrição: Permite a busca por produtos específicos.
+\end{itemize}
 
-### Fluxos de Interação do Usuário
+## 9. Autenticação e Segurança
 
-1. Visualização da Lista de Histórias:
-   - O usuário pode navegar pela lista de histórias, visualizando os cards de cada história.
-   - Ele pode clicar em uma história para ver mais detalhes.
+### Métodos de Autenticação Utilizados
 
-2. Busca e Filtragem:
-   - O usuário pode buscar histórias por título utilizando a barra de busca.
-   - Ele também pode filtrar as histórias por categoria utilizando o menu de categorias.
+A autenticação dos usuários é realizada utilizando o sistema de autenticação padrão do Django. Os usuários podem fazer login com seu nome de usuário e senha, e novos usuários podem se registrar para criar uma conta e acessar funcionalidades adicionais.
 
-## 9. Arquitetura de Implementação
+### Exemplos de Uso
 
-### Organização do Código-Fonte
+#### Exemplo 1: Registro de Conta
 
-O código-fonte do sistema está organizado em diferentes diretórios de acordo com sua funcionalidade:
+1. Navegue para a página de registro (\texttt{/register/}).
+2. Preencha o formulário de registro com seu nome de usuário e senha desejados.
+3. Clique no botão "Registrar" para enviar o formulário.
+4. Após o registro bem-sucedido, você será redirecionado para a página de perfil (\texttt{/update_info/}) para adicionar detalhes adicionais.
 
-- `models/`: Contém os modelos de dados do sistema.
-- `views/`: Contém as views responsáveis por processar as requisições do usuário.
-- `templates/`: Contém os templates HTML utilizados para renderizar as páginas.
-- `static/`: Contém arquivos estáticos como CSS, JavaScript e imagens.
+#### Exemplo 2: Login na Conta
 
-### Divisão em Módulos e Componentes
+1. Navegue para a página de login (\texttt{/login/}).
+2. Insira seu nome de usuário e senha.
+3. Clique no botão "Login" para acessar sua conta.
+4. Após o login bem-sucedido, você será redirecionado para a página principal (\texttt{/}) para começar a navegar pelos produtos.
 
-O código-fonte está dividido em mód
+#### Exemplo 3: Atualização de Detalhes do Usuário
+
+1. Navegue para a página de perfil (\texttt{/update_user/}).
+2. Visualize seus detalhes atuais.
+3. Atualize os detalhes conforme necessário.
+4. Clique no botão "Salvar" para salvar as mudanças.
+
+#### Exemplo 4: Adição de Informações Adicionais do Usuário
+
+1. Navegue para a página de informações adicionais (\texttt{/update_info/}).
+2. Preencha o formulário com detalhes adicionais, como endereço e informações de contato.
+3. Clique no botão "Salvar" para salvar as mudanças.
+
+\end{document}
