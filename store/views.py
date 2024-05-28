@@ -75,3 +75,37 @@ def update_user(request):
 	else:
 		messages.success(request, "You Must Be Logged In To Access That Page!!")
 		return redirect('home')
+
+
+
+
+def category_summary(request):
+	categories = Category.objects.all()
+	return render(request, 'category_summary.html', {"categories":categories})	
+
+def category(request, foo):
+	# Replace Hyphens with Spaces
+	foo = foo.replace('-', ' ')
+	# Grab the category from the url
+	try:
+		# Look Up The Category
+		category = Category.objects.get(name=foo)
+		products = Product.objects.filter(category=category)
+		return render(request, 'category.html', {'products':products, 'category':category})
+	except:
+		messages.success(request, ("That Category Doesn't Exist..."))
+		return redirect('home')
+
+
+def product(request,pk):
+	product = Product.objects.get(id=pk)
+	return render(request, 'product.html', {'product':product})
+
+
+def home(request):
+	products = Product.objects.all()
+	return render(request, 'home.html', {'products':products})
+
+
+def about(request):
+	return render(request, 'about.html', {})	
