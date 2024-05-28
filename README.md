@@ -2,7 +2,7 @@
 
 
 
-author {Vinícius de Morais Lino}
+author - Vinícius de Morais Lino
 
 
 # Escopo do Projeto
