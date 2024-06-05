@@ -191,16 +191,6 @@ python manage.py runserver
 
 Acesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
 
-### Navegação e Funcionalidades do Sistema
-
-- Navegue pelos produtos na página principal.
-- Utilize a barra de busca para encontrar produtos específicos.
-- Veja informações detalhadas dos produtos na página de detalhes do produto.
-- Adicione produtos ao carrinho e gerencie os itens selecionados.
-- Prossiga para a finalização de compra para concluir suas compras.
-- Registre-se e faça login para acessar funcionalidades personal
-
-
 
 cesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
 
@@ -217,19 +207,17 @@ cesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
 
 ## 8. Endpoints e Descrições
 
-\begin{itemize}
-    \item \textbf{Homepage:} URL: \texttt{/} Método: GET Descrição: Exibe a página principal com produtos.
-    \item \textbf{About Section:} URL: \texttt{/about/} Método: GET Descrição: Exibe informações sobre a aplicação.
-    \item \textbf{Login Page:} URL: \texttt{/login/} Método: GET, POST Descrição: Permite que os usuários façam login.
-    \item \textbf{Logout Page:} URL: \texttt{/logout/} Método: GET Descrição: Permite que os usuários façam logout.
-    \item \textbf{Register Page:} URL: \texttt{/register/} Método: GET, POST Descrição: Permite que novos usuários se registrem.
-    \item \textbf{Profile Page:} URL: \texttt{/update_user/} Método: GET, POST Descrição: Permite que os usuários visualizem e atualizem seus detalhes.
-    \item \textbf{User Info Page:} URL: \texttt{/update_info/} Método: GET, POST Descrição: Permite que os usuários adicionem informações adicionais.
-    \item \textbf{Product Categories Page:} URL: \texttt{/category/str:foo/} Método: GET Descrição: Exibe produtos de uma categoria específica.
-    \item \textbf{Product Details Page:} URL: \texttt{/product/int:pk/} Método: GET Descrição: Exibe informações detalhadas de um produto específico.
-    \item \textbf{Cart Page:} URL: \texttt{/cart/} Método: GET Descrição: Exibe os produtos adicionados ao carrinho.
-    \item \textbf{Search Page:} URL: \texttt{/search/} Método: GET, POST Descrição: Permite a busca por produtos específicos.
-\end{itemize}
+- Homepage URL: / Método: GET Descrição: Exibe a página inicial com produtos de moletom.
+- About Section URL: /about/ Método: GET Descrição: Exibe informações sobre o aplicativo.
+- Login Page URL: /login/ Método: GET, POST Descrição: Permite que os usuários façam login em suas contas.
+- Logout Page URL: /logout/ Método: GET Descrição: Permite que os usuários façam logout de suas contas.
+- Register Page URL: /register/ Método: GET, POST Descrição: Permite que novos usuários se registrem.
+- Profile Page URL: /update_user/ Método: GET, POST Descrição: Permite que os usuários visualizem e atualizem seus dados.
+- User Info Page URL: /update_info/ Método: GET, POST Descrição: Permite que os usuários adicionem detalhes adicionais sobre si mesmos.
+- Product Categories Page URL: /category/str/  Método: GET Descrição: Exibe produtos de moletom pertencentes a uma categoria específica.
+- Product Details Page URL: /product/int/ Método: GET Descrição: Exibe informações detalhadas sobre um produto de moletom específico.
+- Cart Page URL: /cart/ Método: GET Descrição: Exibe todos os produtos de moletom adicionados ao carrinho de compras.
+- Search Page URL: /search/ Método: GET, POST Descrição: Permite que os usuários procurem produtos de moletom específicos.
 
 ## 9. Autenticação e Segurança
 
