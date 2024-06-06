@@ -189,10 +189,8 @@ python manage.py migrate
 python manage.py runserver
 
 
-Acesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
+Acesse a aplicação no navegador em {http://127.0.0.1:8080/}.
 
-
-cesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
 
 ### Navegação e Funcionalidades do Sistema
 
