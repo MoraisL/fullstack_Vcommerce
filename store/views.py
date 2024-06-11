@@ -36,7 +36,7 @@ def update_info(request):
 			return redirect('home')
 		return render(request, "update_info.html", {'form':form})
 	else:
-		messages.success(request, "You Must Be Logged In To Access That Page!!")
+		messages.success(request, "Você deve estar logado para acessar essa página!!")
 		return redirect('home')
 def update_password(request):
 	if request.user.is_authenticated:
@@ -47,7 +47,7 @@ def update_password(request):
 			# Is the form valid
 			if form.is_valid():
 				form.save()
-				messages.success(request, "Your Password Has Been Updated...")
+				messages.success(request, "A Senha Foi Atualizada...")
 				login(request, current_user)
 				return redirect('update_user')
 			else:
@@ -58,7 +58,7 @@ def update_password(request):
 			form = ChangePasswordForm(current_user)
 			return render(request, "update_password.html", {'form':form})
 	else:
-		messages.success(request, "You Must Be Logged In To View That Page...")
+		messages.success(request, "Você deve estar logado para acessar essa página...")
 		return redirect('home')
 def update_user(request):
 	if request.user.is_authenticated:
@@ -69,11 +69,11 @@ def update_user(request):
 			user_form.save()
 
 			login(request, current_user)
-			messages.success(request, "User Has Been Updated!!")
+			messages.success(request, "O usuário foi atualizado!!")
 			return redirect('home')
 		return render(request, "update_user.html", {'user_form':user_form})
 	else:
-		messages.success(request, "You Must Be Logged In To Access That Page!!")
+		messages.success(request, "Você deve estar logado para acessar essa página!!")
 		return redirect('home')
 
 
@@ -93,7 +93,7 @@ def category(request, foo):
 		products = Product.objects.filter(category=category)
 		return render(request, 'category.html', {'products':products, 'category':category})
 	except:
-		messages.success(request, ("That Category Doesn't Exist..."))
+		messages.success(request, ("Esta Categoria Não Existe..."))
 		return redirect('home')
 
 
@@ -118,10 +118,10 @@ def login_user(request):
 		user = authenticate(request, username=username, password=password)
 		if user is not None:
 			login(request, user)
-			messages.success(request, ("You Have Been Logged In!"))
+			messages.success(request, ("Você já esta na sua conta!"))
 			return redirect('home')
 		else:
-			messages.success(request, ("There was an error, please try again..."))
+			messages.success(request, ("Ocorreu Um Erro Com As Suas Credenciais, Tente Novamente..."))
 			return redirect('login')
 
 	else:
