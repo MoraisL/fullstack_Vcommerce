@@ -30,7 +30,7 @@ class ChangePasswordForm(SetPasswordForm):
 		self.fields['new_password1'].widget.attrs['class'] = 'form-control'
 		self.fields['new_password1'].widget.attrs['placeholder'] = 'Password'
 		self.fields['new_password1'].label = ''
-		self.fields['new_password1'].help_text = '<ul class="form-text text-muted small"><li>Your password can\'t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can\'t be a commonly used password.</li><li>Your password can\'t be entirely numeric.</li></ul>'
+		self.fields['new_password1'].help_text = '<ul class="form-text text-muted small"><li>Your password can\'t be too similar to your other personal information.</li><li>Sua senha deve conter pelo menos 8 caracteres.</li><li>Your password can\'t be a commonly used password.</li><li>Your password can\'t be entirely numeric.</li></ul>'
 
 		self.fields['new_password2'].widget.attrs['class'] = 'form-control'
 		self.fields['new_password2'].widget.attrs['placeholder'] = 'Confirm Password'
@@ -59,7 +59,7 @@ class UpdateUserForm(UserChangeForm):
 
 		
 class SignUpForm(UserCreationForm):
-	email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}))
+	email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Endereço de Email'}))
 	first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Primeiro Nome'}))
 	last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Último Nome'}))
 
@@ -78,7 +78,7 @@ class SignUpForm(UserCreationForm):
 		self.fields['password1'].widget.attrs['class'] = 'form-control'
 		self.fields['password1'].widget.attrs['placeholder'] = 'Senha'
 		self.fields['password1'].label = ''
-		self.fields['password1'].help_text = '<ul class="form-text text-muted small"><li>Sua senha não pode ser muito parecida com suas outras informações pessoais.</li><li>Your password must contain at least 8 characters.</li><li>Your password can\'t be a commonly used password.</li><li>Your password can\'t be entirely numeric.</li></ul>'
+		self.fields['password1'].help_text = '<ul class="form-text text-muted small"><li>Sua senha não pode ser muito parecida com suas outras informações pessoais.</li><li>Sua senha deve conter mais que 8 caracteres.</li><li>Your password can\'t be a commonly used password.</li><li>Your password can\'t be entirely numeric.</li></ul>'
 
 		self.fields['password2'].widget.attrs['class'] = 'form-control'
 		self.fields['password2'].widget.attrs['placeholder'] = 'Confirmação da Senha'
