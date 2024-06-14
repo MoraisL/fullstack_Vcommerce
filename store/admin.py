@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Category, Customer, Product, Order, Profile
 from django.contrib.auth.models import User
 
+# Registrar os modelos no painel de administração do Django
 admin.site.register(Category)
 admin.site.register(Customer)
 admin.site.register(Product)
@@ -9,18 +10,18 @@ admin.site.register(Order)
 admin.site.register(Profile)
 
 
-# Mix profile info and user info
+# Misturar informações do perfil e informações do usuário
 class ProfileInline(admin.StackedInline):
-	model = Profile
+    model = Profile
 
-# Extend User Model
+# Estender o modelo de Usuário
 class UserAdmin(admin.ModelAdmin):
-	model = User
-	field = ["username", "first_name", "last_name", "email"]
-	inlines = [ProfileInline]
+    model = User
+    fields = ["username", "first_name", "last_name", "email"]
+    inlines = [ProfileInline]
 
-# Unregister the old way
+# Cancelar o registro do modelo de Usuário da forma antiga
 admin.site.unregister(User)
 
-# Re-Register the new way
+# Registrar novamente de forma personalizada
 admin.site.register(User, UserAdmin)
