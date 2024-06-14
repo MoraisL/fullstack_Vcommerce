@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Product, Category, Profile
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from .serializers import CategorySerializer, ProductSerializer, ProfileSerializer, CustomerSerializer, OrderSerializer
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .forms import SignUpForm, UpdateUserForm, ChangePasswordForm, UserInfoForm
