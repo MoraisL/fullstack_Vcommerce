@@ -17,7 +17,7 @@ def search(request):
 		searched = Product.objects.filter(Q(name__icontains=searched) | Q(description__icontains=searched))
 		# Test for null
 		if not searched:
-			messages.success(request, "That Product Does Not Exist...Please try Again.")
+			messages.success(request, "Este Produto Não Existe, por favor Tente Novamente...")
 			return render(request, "search.html", {})
 		else:
 			return render(request, "search.html", {'searched':searched})
@@ -32,7 +32,7 @@ def update_info(request):
 
 		if form.is_valid():
 			form.save()
-			messages.success(request, "Your Info Has Been Updated!!")
+			messages.success(request, "Suas informações foram atualizadas com sucesso!!")
 			return redirect('home')
 		return render(request, "update_info.html", {'form':form})
 	else:
