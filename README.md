@@ -15,7 +15,7 @@ O projeto consiste no desenvolvimento de um sistema web fullstack para um E-comm
 
 ### Objetivos e Propósito do Sistema
 
-O objetivo principal do sistema é proporcionar uma plataforma intuitiva e eficiente para que os usuários possam realizar compras online de forma organizada. O sistema visa facilitar a navegação, a busca e a compra de produtos, proporcionando uma experiência de usuário agradável e segura.
+O objetivo principal do sistema é proporcionar uma plataforma intuitiva e eficiente para que os usuários possam realizar compras online de forma organizada. O sistema visa facilitar a navegação, a busca de produtos, proporcionando uma experiência de usuário agradável e segura.
 
 ### Benefícios Esperados do Projeto
 
@@ -34,24 +34,6 @@ O sistema é uma aplicação web desenvolvida utilizando o framework Django, que
 
 O público-alvo do sistema são consumidores que desejam realizar compras online. O sistema é voltado para uma ampla gama de usuários, desde compradores ocasionais até consumidores frequentes de lojas virtuais.
 
-### Requisitos Funcionais e Não Funcionais
-
-#### Requisitos Funcionais
-
-- Cadastro de novos produtos com nome, descrição, preço, imagem e categoria.
-- Visualização de lista de produtos.
-- Filtragem de produtos por categoria.
-- Busca de produtos por nome ou categoria.
-- Visualização detalhada de cada produto.
-- Adicionar produtos ao carrinho de compras.
-- Remover produtos do carrinho de compras.
-- Finalização de compra e processamento de pagamento.
-
-#### Requisitos Não Funcionais
-
-- Desempenho rápido e responsivo da aplicação.
-- Segurança na autenticação de usuários e proteção de dados sensíveis.
-- Facilidade de manutenção e escalabilidade do sistema.
 
 ## 3. Arquitetura do Sistema
 
@@ -84,7 +66,7 @@ Embora a arquitetura MVT seja predominante no Django, é comum utilizar o padrã
 - Visualização detalhada de cada produto.
 - Adicionar produtos ao carrinho de compras.
 - Remover produtos do carrinho de compras.
-- Finalização de compra e processamento de pagamento.
+
 
 ### Casos de Uso Principais
 
@@ -94,7 +76,6 @@ Embora a arquitetura MVT seja predominante no Django, é comum utilizar o padrã
 - Um usuário deseja filtrar os produtos por categoria.
 - Um usuário deseja buscar um produto específico por nome ou categoria.
 - Um usuário deseja visualizar detalhes completos de um produto selecionado.
-- Um usuário deseja finalizar a compra e processar o pagamento.
 
 ### Fluxos de Trabalho do Usuário
 
@@ -189,20 +170,8 @@ python manage.py migrate
 python manage.py runserver
 
 
-Acesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
+Acesse a aplicação no navegador em {http://127.0.0.1:8080/}.
 
-### Navegação e Funcionalidades do Sistema
-
-- Navegue pelos produtos na página principal.
-- Utilize a barra de busca para encontrar produtos específicos.
-- Veja informações detalhadas dos produtos na página de detalhes do produto.
-- Adicione produtos ao carrinho e gerencie os itens selecionados.
-- Prossiga para a finalização de compra para concluir suas compras.
-- Registre-se e faça login para acessar funcionalidades personal
-
-
-
-cesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
 
 ### Navegação e Funcionalidades do Sistema
 
@@ -217,19 +186,17 @@ cesse a aplicação no navegador em \url{http://127.0.0.1:8080/}.
 
 ## 8. Endpoints e Descrições
 
-\begin{itemize}
-    \item \textbf{Homepage:} URL: \texttt{/} Método: GET Descrição: Exibe a página principal com produtos.
-    \item \textbf{About Section:} URL: \texttt{/about/} Método: GET Descrição: Exibe informações sobre a aplicação.
-    \item \textbf{Login Page:} URL: \texttt{/login/} Método: GET, POST Descrição: Permite que os usuários façam login.
-    \item \textbf{Logout Page:} URL: \texttt{/logout/} Método: GET Descrição: Permite que os usuários façam logout.
-    \item \textbf{Register Page:} URL: \texttt{/register/} Método: GET, POST Descrição: Permite que novos usuários se registrem.
-    \item \textbf{Profile Page:} URL: \texttt{/update_user/} Método: GET, POST Descrição: Permite que os usuários visualizem e atualizem seus detalhes.
-    \item \textbf{User Info Page:} URL: \texttt{/update_info/} Método: GET, POST Descrição: Permite que os usuários adicionem informações adicionais.
-    \item \textbf{Product Categories Page:} URL: \texttt{/category/str:foo/} Método: GET Descrição: Exibe produtos de uma categoria específica.
-    \item \textbf{Product Details Page:} URL: \texttt{/product/int:pk/} Método: GET Descrição: Exibe informações detalhadas de um produto específico.
-    \item \textbf{Cart Page:} URL: \texttt{/cart/} Método: GET Descrição: Exibe os produtos adicionados ao carrinho.
-    \item \textbf{Search Page:} URL: \texttt{/search/} Método: GET, POST Descrição: Permite a busca por produtos específicos.
-\end{itemize}
+- Homepage URL: / Método: GET Descrição: Exibe a página inicial com produtos de moletom.
+- About Section URL: /about/ Método: GET Descrição: Exibe informações sobre o aplicativo.
+- Login Page URL: /login/ Método: GET, POST Descrição: Permite que os usuários façam login em suas contas.
+- Logout Page URL: /logout/ Método: GET Descrição: Permite que os usuários façam logout de suas contas.
+- Register Page URL: /register/ Método: GET, POST Descrição: Permite que novos usuários se registrem.
+- Profile Page URL: /update_user/ Método: GET, POST Descrição: Permite que os usuários visualizem e atualizem seus dados.
+- User Info Page URL: /update_info/ Método: GET, POST Descrição: Permite que os usuários adicionem detalhes adicionais sobre si mesmos.
+- Product Categories Page URL: /category/str/  Método: GET Descrição: Exibe produtos de moletom pertencentes a uma categoria específica.
+- Product Details Page URL: /product/int/ Método: GET Descrição: Exibe informações detalhadas sobre um produto de moletom específico.
+- Cart Page URL: /cart/ Método: GET Descrição: Exibe todos os produtos de moletom adicionados ao carrinho de compras.
+- Search Page URL: /search/ Método: GET, POST Descrição: Permite que os usuários procurem produtos de moletom específicos.
 
 ## 9. Autenticação e Segurança
 
@@ -241,17 +208,17 @@ A autenticação dos usuários é realizada utilizando o sistema de autenticaç�
 
 #### Exemplo 1: Registro de Conta
 
-1. Navegue para a página de registro (\texttt{/register/}).
+1. Navegue para a página de registro (/register/}).
 2. Preencha o formulário de registro com seu nome de usuário e senha desejados.
 3. Clique no botão "Registrar" para enviar o formulário.
-4. Após o registro bem-sucedido, você será redirecionado para a página de perfil (\texttt{/update_info/}) para adicionar detalhes adicionais.
+4. Após o registro bem-sucedido, você será redirecionado para a página de perfil (update_info/}) para adicionar detalhes adicionais.
 
 #### Exemplo 2: Login na Conta
 
-1. Navegue para a página de login (\texttt{/login/}).
+1. Navegue para a página de login (/login/}).
 2. Insira seu nome de usuário e senha.
 3. Clique no botão "Login" para acessar sua conta.
-4. Após o login bem-sucedido, você será redirecionado para a página principal (\texttt{/}) para começar a navegar pelos produtos.
+4. Após o login bem-sucedido, você será redirecionado para a página principal (/) para começar a navegar pelos produtos.
 
 #### Exemplo 3: Atualização de Detalhes do Usuário
 
